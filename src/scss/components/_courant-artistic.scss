@@ -1,0 +1,146 @@
+.courant {
+  width: 100%;
+  height: 100%;
+  @include flex($dir: column, $jc: center, $ai: center);
+  @include desktop {
+    margin-top: calc($base * 40);
+  }
+  @include large-screen {
+    margin-top: calc($base * 70);
+  }
+
+  &__section1 {
+    @include flex($dir: column, $jc: center, $ai: center);
+    width: 85%;
+    @include desktop {
+      width: 100%;
+      @include flex($dir: row, $jc: space-between, $ai: center);
+      margin: calc($base * 10) 0;
+    }
+    @include large-screen {
+      width: 75%;
+    }
+    &-container1 {
+      width: 100%;
+      height: 100%;
+    }
+    &-container2 {
+      picture {
+        margin: calc($base * 3);
+      }
+    }
+    &-title {
+      @include desktop {
+        height: calc($base * 19);
+        position: relative;
+      }
+      .title {
+        width: 220px;
+        @include mobile {
+          width: 400px;
+        }
+        @include laptop {
+          width: 520px;
+        }
+        @include desktop {
+          position: absolute;
+          width: 720px;
+          top: calc($base * -35);
+          left: calc($base * 15);
+        }
+        @include large-screen {
+          width: 900px;
+          top: calc($base * -55);
+          left: calc($base * -6);
+        }
+      }
+    }
+    &-article {
+      @include flex($dir: column, $jc: center, $ai: center);
+      @include laptop {
+        @include flex($dir: row, $jc: space-around, $ai: center);
+      }
+      @include desktop {
+        @include flex($dir: row, $jc: space-around, $ai: center);
+      }
+      width: 100%;
+      &_ {
+        @include flex($dir: column, $jc: center, $ai: center);
+        &paragraph {
+          width: calc($base * 41.25);
+        }
+      }
+      &_text {
+        width: calc($base * 41.25);
+
+        .read-more {
+          @include flex($dir: row, $jc: end, $ai: center);
+          @include desktop {
+            @include flex($dir: row, $jc: start, $ai: center);
+          }
+          width: 100%;
+          height: calc($base * 5);
+          svg {
+            margin-left: calc($base / 2);
+          }
+          p {
+            cursor: pointer;
+          }
+        }
+      }
+    }
+    &-container2 {
+      @include flex($dir: row, $jc: center, $ai: center);
+      width: min-content;
+    }
+  }
+
+  &__section2 {
+    width: 100%;
+    margin: calc($base * 10) 0;
+    @include flex($dir: column, $jc: center, $ai: center);
+    @include desktop {
+      margin: calc($base * 10) 0;
+    }
+
+    &-title {
+      width: 80%;
+      h2 {
+        width: 100%;
+        &:first-of-type {
+          text-align: left;
+        }
+      }
+    }
+
+    &__article {
+      @include flex($dir: column, $jc: center, $ai: center);
+      width: 100%;
+      @include tablet {
+        @include flex($dir: row, $jc: space-around, $ai: center, $wp: wrap);
+      }
+      @include desktop {
+        width: 85%;
+      }
+
+      &_card {
+        @include flex($dir: column, $jc: center, $ai: center);
+        width: calc($base * 41.25);
+        flex-wrap: wrap;
+        height: calc($base * 53.75);
+        background-color: white;
+        margin: calc($base * 3) 0;
+        padding: $base 0;
+
+        picture {
+          width: min-content;
+          height: min-content;
+        }
+        div {
+          width: calc($base * 32.875);
+          height: 100px;
+        }
+      }
+    }
+  }
+}

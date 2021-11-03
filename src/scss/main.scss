@@ -1,0 +1,14 @@
+::-webkit-scrollbar {
+  display: none;
+}
+
+@import "common/variables";
+@import "common/general-reset";
+@import "common/mixins";
+
+//components
+@import "components/contact";
+@import "components/courant-artistic";
+@import "components/header";
+@import "components/footer";
+@import "components/home";

@@ -1,0 +1,115 @@
+.contact {
+  width: 100%;
+  height: 100%;
+  @include flex($dir: column, $jc: center, $ai: center);
+
+  &__info {
+    width: 85%;
+    @include desktop {
+      margin-top: calc($base * 15);
+      @include flex($dir: row-reverse, $jc: space-around, $ai: center);
+    }
+    &--title {
+      @include flex($dir: column, $jc: center, $ai: center);
+      @include desktop {
+        width: 40%;
+        padding: 0 calc($base * 10);
+      }
+      h1,
+      h2 {
+        width: 100%;
+        text-align: left;
+      }
+
+      .read-more {
+        @include flex($dir: row, $jc: end, $ai: center);
+        @include desktop {
+          @include flex($dir: row, $jc: start, $ai: center);
+        }
+        width: 100%;
+        height: calc($base * 5);
+        svg {
+          margin-left: calc($base / 2);
+        }
+        p {
+          cursor: pointer;
+        }
+      }
+    }
+    &--img {
+      @include flex($dir: row, $jc: center, $ai: center);
+      width: 100%;
+      @include desktop {
+        width: calc($base * 66.25);
+      }
+      art-img1 {
+        width: min-content;
+        transition: transform 0.4s ease-in;
+        &:hover {
+          transform: scale(1.3);
+        }
+      }
+    }
+  }
+
+  &__form {
+    margin: calc($base * 10) 0 0 0;
+    width: 85%;
+    @include flex($dir: column, $jc: center, $ai: center);
+    @include desktop {
+      @include flex($dir: row, $jc: space-around, $ai: center);
+      height: 1000px;
+    }
+    &--body {
+      width: 100%;
+      @include desktop {
+        width: 40%;
+      }
+      h2 {
+        text-align: center;
+        margin: calc($base * 5);
+      }
+      label {
+        p {
+          text-transform: uppercase;
+        }
+        input {
+          background-color: #fffbf5;
+          border-style: none;
+          border-bottom: 1px solid #d1bfb2;
+          width: 80%;
+          &:focus {
+            outline: none;
+          }
+          &::placeholder {
+            color: #d1bfb2;
+          }
+        }
+      }
+      &--btn {
+        @include flex($dir: row, $jc: start, $ai: center);
+        height: calc($base * 15);
+        border-style: none;
+        background-color: #fffbf5;
+        text-transform: uppercase;
+
+        svg {
+          margin-left: calc($base * 2);
+        }
+      }
+    }
+    &--img {
+      width: 85%;
+      @include flex($dir: row, $jc: center, $ai: center);
+      @include desktop {
+        width: 40%;
+        margin-top: calc($base * 7);
+      }
+      picture {
+        width: min-content;
+
+        margin: calc($base * 10);
+      }
+    }
+  }
+}

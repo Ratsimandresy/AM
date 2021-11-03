@@ -1,0 +1,29 @@
+{
+  "name": "artistic-movement",
+  "version": "1.0.0",
+  "description": "=> artistic-movement/",
+  "main": "index.js",
+  "scripts": {
+    "start": "lite-server",
+    "scss": "npx sass src/scss/main.scss:src/css/main.css --no-source-map",
+    "scss-watch": "npx sass src/scss/main.scss:src/css/main.css --no-source-map -w",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://Ratsimandresy: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@github.com/Ratsimandresy/Artistic.Movement.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ratsimandresy/Artistic.Movement/issues"
+  },
+  "homepage": "https://github.com/Ratsimandresy/Artistic.Movement#readme",
+  "devDependencies": {
+    "sass": "^1.43.3"
+  },
+  "dependencies": {
+    "lite-server": "^2.6.1"
+  }
+}

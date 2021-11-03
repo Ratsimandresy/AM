@@ -1,0 +1,84 @@
+body > footer {
+  background-color: $color-brand;
+  display: flex;
+  position: relative;
+  margin-top: 70px;
+  align-content: center;
+  justify-content: space-between;
+  padding: 30px;
+
+  .logo-footer {
+    position: absolute;
+    background-image: url("../assets/images/home/triangle-footer.svg");
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: 144px 67px;
+    padding: 0 50px 70px 50px;
+    top: -20px;
+    width: 12%;
+    transform: translateX(50%);
+  }
+
+  .footer-menu {
+    ul {
+      width: auto;
+      padding: 0;
+
+      li {
+        margin-bottom: 3px;
+
+        a {
+          color: white;
+          font-weight: normal;
+        }
+      }
+    }
+  }
+
+  .footer-adresse {
+    width: 40%;
+    color: white;
+    font-family: "Playfair Display", serif;
+  }
+}
+
+@media (min-width: 1000px) {
+  body > footer {
+    margin-top: 150px;
+    justify-content: space-evenly;
+    padding: 70px;
+
+    .logo-footer {
+      background-size: 307px 143px;
+      padding: 0 100px 100px;
+      transform: translateX(0%);
+      top: -60px;
+      width: 100px;
+    }
+
+    .footer-menu {
+      ul {
+        width: auto;
+        padding: 0;
+
+        li {
+          list-style: none;
+          margin-bottom: 3px;
+
+          a {
+            text-decoration: none;
+            color: white;
+            font-family: "Playfair Display", serif;
+            font-weight: normal;
+          }
+        }
+      }
+    }
+
+    .footer-adresse {
+      width: 15%;
+      color: white;
+      font-family: "Playfair Display", serif;
+    }
+  }
+}

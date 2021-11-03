@@ -1,0 +1,384 @@
+.container {
+  margin: 20px;
+
+  a {
+    padding-left: 55px;
+    position: relative;
+  }
+
+  a::before {
+    content: "";
+    background: url("../assets/images/ligne.png") center center no-repeat;
+    width: 47px;
+    height: 2px;
+    top: 10px;
+    left: 0;
+    position: absolute;
+  }
+
+  // CONTENU HOME PAGE
+
+  .section-1 {
+    margin: 80px 0;
+
+    h1 {
+      font-size: 40px;
+      font-weight: normal;
+      margin: 0;
+    }
+
+    h2:first-of-type {
+      font-style: italic;
+      color: $color-darkGrey;
+      text-align: end;
+    }
+
+    h2:last-of-type {
+      color: $color-brand;
+      text-align: center;
+    }
+  }
+
+  .section-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    position: relative;
+
+    img {
+      width: 100%;
+    }
+
+    .tab1 {
+      width: 90%;
+    }
+
+    .tab2 {
+      width: 90%;
+    }
+
+    .tab3 {
+      width: 80%;
+      justify-self: end;
+    }
+
+    .tab4 {
+      margin-top: 10px;
+      width: 90%;
+      justify-self: end;
+    }
+
+    .tab5 {
+      position: absolute;
+      width: 55%;
+      top: 280px;
+      z-index: 3;
+    }
+
+    .tab6 {
+      position: absolute;
+      width: 30%;
+      top: 80px;
+      right: 0px;
+    }
+
+    .tab7 {
+      position: absolute;
+      width: 60%;
+      top: 380px;
+      z-index: 3;
+      right: 20px;
+    }
+
+    .tab8 {
+      position: absolute;
+      width: 35%;
+      top: 450px;
+      left: 50px;
+    }
+  }
+
+  .section-3 {
+    margin-top: 330px;
+
+    footer {
+      position: relative;
+      margin-top: 60px;
+
+      .tab-grand {
+        width: 90%;
+      }
+
+      .tab-petit {
+        position: absolute;
+        right: 0;
+        top: -70px;
+        border-radius: 152px;
+        box-shadow: 0 0 30px black;
+        width: 30%;
+      }
+    }
+  }
+
+  .section-4 {
+    margin-top: 70px;
+
+    footer {
+      display: flex;
+      gap: 20px;
+      overflow: hidden;
+      margin-top: 20px;
+
+      .tab-petit {
+        width: 50%;
+        height: auto;
+      }
+
+      .tab-grand {
+        width: 50%;
+      }
+    }
+  }
+
+  .section-5 {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 60% 40%;
+    overflow: hidden;
+    margin-top: 70px;
+
+    .card {
+      position: relative;
+
+      img {
+        height: 100%;
+        width: 100%;
+      }
+
+      .card-color {
+        position: absolute;
+        background-color: white;
+        padding: 7px;
+        bottom: 5px;
+        left: 5px;
+
+        img {
+          width: 50px;
+        }
+
+        p {
+          font-size: 12px;
+          margin: 0;
+        }
+      }
+
+      &.card2 {
+        grid-row: span 2;
+      }
+
+      &.card4 {
+        display: none;
+      }
+    }
+
+    h2 {
+      grid-column: span 2;
+    }
+  }
+}
+
+@media (min-width: 1000px) {
+  .container {
+    max-width: 1440px;
+    margin: auto;
+    padding: 0 10%;
+
+    .section-1 {
+      margin: 60px 0;
+      h1,
+      h2,
+      h3 {
+        font-size: 140px;
+        line-height: 150px;
+      }
+    }
+
+    .section-2 {
+      margin-top: 200px;
+      grid-template-columns: repeat(4, 1fr);
+
+      .tab1 {
+        width: 90%;
+        padding-top: 30px;
+      }
+
+      .tab2 {
+        width: 80%;
+        padding: 50px;
+      }
+
+      .tab3 {
+        width: 150%;
+        justify-self: start;
+      }
+
+      .tab4 {
+        padding-top: 60px;
+        width: 90%;
+        z-index: 1;
+      }
+
+      .tab5 {
+        position: relative;
+        width: 160%;
+        top: 0px;
+        z-index: 3;
+      }
+
+      .tab6 {
+        position: absolute;
+        width: 30%;
+        top: 250px;
+        left: 35%;
+        z-index: 4;
+      }
+
+      .tab7 {
+        position: relative;
+        width: 130%;
+        top: 0;
+        z-index: 3;
+        left: 130%;
+      }
+
+      .tab8 {
+        position: relative;
+        width: 100%;
+        top: 30px;
+        left: 100%;
+        z-index: 4;
+      }
+    }
+
+    .section-3 {
+      margin-top: 80px;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+
+      header {
+        width: 80%;
+      }
+
+      main {
+        box-sizing: border-box;
+        width: 50%;
+        padding: 70px 100px;
+      }
+
+      footer {
+        width: 40%;
+        display: flex;
+        margin-top: 100px;
+
+        .tab-grand {
+          width: 100%;
+          margin-left: auto;
+        }
+
+        .tab-petit {
+          width: 30%;
+          left: -15%;
+          top: -70px;
+        }
+      }
+    }
+
+    .section-4 {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      text-align: end;
+      margin-top: 150px;
+
+      header {
+        order: 2;
+      }
+
+      main {
+        order: 3;
+      }
+
+      footer {
+        order: 1;
+        grid-row: span 2;
+        position: relative;
+
+        .tab-grand {
+          position: absolute;
+          top: 15%;
+          right: 20%;
+          width: 40%;
+          box-shadow: 0 0 30px black;
+        }
+
+        img.tab-petit {
+          width: 50%;
+        }
+      }
+    }
+
+    .section-5 {
+      margin-top: 150px;
+      grid-template-columns: 1fr 0.5fr 1fr 0.5fr;
+      align-items: center;
+
+      h2 {
+        grid-column: span 4;
+        margin-bottom: 30px;
+      }
+
+      .card {
+        display: flex;
+        justify-content: center;
+
+        .card-color {
+          bottom: 5px;
+
+          p {
+            font-size: 16px;
+            margin: 0;
+          }
+
+          img {
+            width: 100%;
+          }
+        }
+
+        .card-color {
+          position: absolute;
+          background-color: white;
+          padding: 7px;
+          bottom: 5px;
+          left: 11%;
+
+          img {
+            width: 50px;
+          }
+
+          p {
+            font-size: 12px;
+            margin: 0;
+          }
+        }
+
+        img {
+          width: 80%;
+        }
+
+        &.card4 {
+          display: flex;
+        }
+      }
+    }
+  }
+}

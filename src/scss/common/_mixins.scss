@@ -1,0 +1,59 @@
+@mixin mobile {
+  @media screen and (min-width: 468px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media screen and (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (min-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin laptop {
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    @content;
+  }
+}
+@mixin large-screen {
+  @media screen and (min-width: 1780px) {
+    @content;
+  }
+}
+
+@mixin flex(
+  $dir: row,
+  $jc: flex-start,
+  $ai: flex-start,
+  $wp: nowrap,
+  $gap: 0px
+) {
+  display: flex;
+  flex-direction: $dir;
+  justify-content: $jc;
+  align-items: $ai;
+  flex-wrap: $wp;
+  gap: $gap;
+}
+
+@mixin font(
+  $ff: Space Mono,
+  $fw: bold,
+  $fs: 24px,
+  $co: $grey,
+  $ln: 28px,
+  $ls: -1.07143px
+) {
+  font-family: $ff;
+  font-weight: $fw;
+  font-size: $fs;
+  color: $co;
+  line-height: $ln;
+  letter-spacing: $ls;
+}

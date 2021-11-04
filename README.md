@@ -132,4 +132,6 @@ git checkout name_of_your_branch
 
 And work on it again :)
 
+Ceci est un test
+
 #######

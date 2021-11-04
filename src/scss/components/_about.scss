@@ -1,0 +1,296 @@
+.header-titre {
+  display: flex;
+  justify-content: center;
+}
+
+h1 {
+  font-family: "Playfair Display", serif;
+  font-weight: 500;
+
+  span {
+    margin-left: 60px;
+  }
+}
+
+p {
+  font-family: "Heebo", sans-serif;
+  font-weight: 300;
+  margin: 0;
+}
+
+#section-presentation {
+  display: flex;
+  flex-direction: column;
+  div:nth-child(1) {
+    padding: 0 5% 0 5%;
+    p {
+      margin: 40px 0;
+    }
+  }
+  div:nth-child(2) {
+    border: solid 1px #707070;
+    transform: rotate(15deg);
+    width: 80%;
+    margin-top: 15%;
+    margin-bottom: 30%;
+    margin-left: -40px;
+    figure {
+      margin-left: 30px;
+      img {
+        transform: rotate(-15deg);
+        width: 125%;
+        box-shadow: 0px 0px 20px black;
+      }
+    }
+  }
+}
+
+#section-space-musee {
+  padding: 0 5% 0 5%;
+  .contain-space {
+    margin-top: 60px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas: "space-1" "space-2" "space-3" "space-4";
+    div {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      margin-bottom: 70px;
+      h3 {
+        margin-top: 30px;
+        margin-bottom: 30px;
+      }
+      img {
+        width: 100%;
+      }
+    }
+    .space-1 {
+      grid-area: space-1;
+    }
+    .space-2 {
+      grid-area: space-2;
+    }
+    .space-3 {
+      grid-area: space-3;
+    }
+    .space-4 {
+      grid-area: space-4;
+    }
+  }
+}
+
+#section-organization-musee {
+  padding: 0 5% 0 5%;
+  .contain-organization {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    .organization3 {
+      display: none;
+    }
+    div {
+      margin: 45px 0;
+      h2 {
+        margin: 0;
+      }
+      h3 {
+        margin: 30px 0;
+      }
+      p {
+        margin: 0 40px;
+      }
+    }
+  }
+}
+
+// VERSION DESKTOP
+
+@media (min-width: 1000px) {
+  // CSS COMMUN
+
+  .container {
+    max-width: 1440px;
+  }
+
+  #section-presentation {
+    flex-direction: row-reverse;
+    align-items: flex-start;
+    margin-top: 5%;
+    margin-bottom: 15%;
+    div:nth-child(1) {
+      padding: 0 10% 0 10%;
+      width: 50%;
+    }
+    div:nth-child(2) {
+      margin-top: 0px;
+      width: 50%;
+      margin-bottom: 0;
+      figure {
+        margin-left: 0px;
+        img {
+          width: 100%;
+          box-shadow: 0px 0px 30px black;
+        }
+      }
+    }
+  }
+
+  #section-space-musee {
+    padding: 0 10% 0 10%;
+    margin-bottom: 10%;
+    .contain-space {
+      margin-top: 50px;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr;
+      gap: 0px 70px;
+      grid-auto-flow: row;
+      grid-template-areas: "space-1 space-2 space-3 space-4";
+      div {
+        margin-bottom: 0px;
+        justify-content: flex-start;
+        h3 {
+          margin-top: 45px;
+          margin-bottom: 45px;
+        }
+        img {
+          width: 100%;
+          -webkit-transition: 0.1s ease-in-out;
+          transition: 0.3s ease-in-out;
+          &:hover {
+            box-shadow: 0px 0px 20px black;
+            margin-top: -20px;
+          }
+        }
+      }
+    }
+  }
+
+  /* #section-organization-musee {
+    padding: 0 5%;
+    .contain-organization {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 0px 0px;
+        grid-auto-flow: row;
+        grid-template-areas: "title-organization title-organization organization1 organization2" "organization3 organization3 organization4 organization5";
+        p {
+            margin: 0 40px;
+        }
+        h3 {
+            margin: 30px 0;
+        }
+        div:nth-child(2), div:nth-child(3), div:nth-child(4), div:nth-child(5), div:nth-child(6) {
+            text-align: center;
+            margin: 45px 0 45px 0;
+        }
+    }
+      .title-organization { grid-area: title-organization; }
+      
+      .organization1 { grid-area: organization1; }
+      
+      .organization2 { grid-area: organization2; }
+      
+      .organization3 { 
+            width: 50%;
+            text-align: right !important;
+        grid-area: organization3; }
+      
+      .organization4 { grid-area: organization4; }
+      
+      .organization5 { grid-area: organization5; }
+      
+} */
+
+  #section-organization-musee {
+    .contain-organization {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      gap: 0px 100px;
+      grid-auto-flow: row;
+      grid-template-areas:
+        "title-organization title-organization organization1 organization2"
+        "organization3 organization4 organization5 organization6";
+      p {
+        margin: 0 0px;
+      }
+      div:nth-child(2),
+      div:nth-child(3),
+      div:nth-child(4),
+      div:nth-child(5),
+      div:nth-child(6),
+      div:nth-child(7),
+      div:nth-child(8) {
+        text-align: left;
+      }
+      .title-organization {
+        grid-area: title-organization;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .organization1 {
+        grid-area: organization1;
+      }
+      .organization2 {
+        grid-area: organization2;
+      }
+      .organization5 {
+        grid-area: organization5;
+      }
+      .organization6 {
+        grid-area: organization6;
+      }
+      .organization3 {
+        grid-area: organization3;
+      }
+      .organization4 {
+        grid-area: organization4;
+      }
+    }
+  }
+
+  #section-organization-musee {
+    .contain-organization {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      gap: 0px 100px;
+      grid-auto-flow: row;
+      grid-template-areas: "title-organization title-organization organization1 organization2" "organization3 organization4 organization5 organization6";
+      div {
+        p {
+          text-align: left;
+          margin: 0;
+        }
+      }
+      .title-organization {
+        grid-area: title-organization;
+      }
+      .organization1 {
+        grid-area: organization1;
+      }
+      .organization2 {
+        grid-area: organization2;
+      }
+      .organization3 {
+        grid-area: organization3;
+      }
+      .organization4 {
+        grid-area: organization4;
+      }
+      .organization5 {
+        grid-area: organization5;
+      }
+      .organization6 {
+        grid-area: organization6;
+      }
+    }
+  }
+}

@@ -44,9 +44,9 @@
         }
         @include desktop {
           position: absolute;
-          width: 720px;
-          top: calc($base * -35);
-          left: calc($base * 15);
+          width: 820px;
+          top: calc($base * -45);
+          left: calc($base * 10);
         }
         @include large-screen {
           width: 900px;
@@ -139,6 +139,143 @@
         div {
           width: calc($base * 32.875);
           height: 100px;
+        }
+      }
+    }
+  }
+
+  &__section3 {
+    width: 100%;
+    @include flex($dir: column, $jc: center, $ai: center);
+
+    h2 {
+      margin: calc($base * 5);
+    }
+
+    &-art {
+      width: 100%;
+      @include flex($dir: column, $jc: center, $ai: center);
+      @include desktop {
+        @include flex($dir: row, $jc: space-around, $ai: center);
+      }
+      &_one {
+        width: 100%;
+        @include flex($dir: column, $jc: center, $ai: center);
+        @include desktop {
+          width: 30%;
+        }
+        .art-1 {
+          @include tablet {
+            height: calc($base * 15);
+          }
+          position: relative;
+          width: 100%;
+          @include flex($dir: row, $jc: center, $ai: center);
+          picture {
+            @include tablet {
+              position: absolute;
+              right: 25%;
+              top: calc($base * 5);
+            }
+            @include tablet {
+              position: absolute;
+              right: calc($base * -5);
+              top: calc($base * -5);
+            }
+          }
+        }
+        .art-2 {
+          width: 100%;
+          @include flex($dir: row, $jc: center, $ai: center);
+        }
+        .art-3 {
+          position: relative;
+          @include tablet {
+            height: calc($base * 15);
+          }
+          width: 100%;
+          @include flex($dir: row, $jc: center, $ai: center);
+          picture {
+            @include tablet {
+              position: absolute;
+              left: 25%;
+              top: calc($base * 5);
+            }
+            @include desktop {
+              position: absolute;
+              left: 100%;
+              top: calc($base * 5);
+            }
+          }
+        }
+      }
+      &_two {
+        width: 100%;
+        @include flex($dir: column, $jc: center, $ai: center);
+        @include desktop {
+          width: 40%;
+        }
+      }
+      &_three {
+        width: 100%;
+        @include flex($dir: column, $jc: center, $ai: center);
+        @include desktop {
+          width: 30%;
+        }
+        .art-4 {
+          @include tablet {
+            height: calc($base * 15);
+          }
+          position: relative;
+          width: 100%;
+          @include flex($dir: row, $jc: center, $ai: center);
+          picture {
+            @include tablet {
+              position: absolute;
+              right: calc($base * 10);
+              top: calc($base * 5);
+            }
+            @include desktop {
+              position: absolute;
+              right: 33%;
+              top: calc($base * -7);
+            }
+          }
+        }
+        .art-5 {
+          position: relative;
+          @include tablet {
+            height: calc($base * 35);
+          }
+          width: 100%;
+          @include flex($dir: row, $jc: center, $ai: center);
+          picture {
+            @include desktop {
+              position: absolute;
+              right: calc($base * 27);
+              top: calc($base * 35);
+            }
+          }
+        }
+        .art-6 {
+          position: relative;
+          @include tablet {
+            height: calc($base * 15);
+          }
+          width: 100%;
+          @include flex($dir: row, $jc: center, $ai: center);
+          picture {
+            @include tablet {
+              position: absolute;
+              left: calc($base * 10);
+              top: calc($base * 5);
+            }
+            @include desktop {
+              position: absolute;
+              left: 42%;
+              top: calc($base * -20);
+            }
+          }
         }
       }
     }

@@ -20,7 +20,7 @@ p {
 }
 
 .section-1 {
-  margin: 80px 0;
+  margin: 80px 10px;
   display: flex;
   justify-content: center;
 }
@@ -104,7 +104,7 @@ a {
   text-decoration: none;
   color: #260402;
   font-family: "Playfair Display", serif;
-  font-weight: bold;
+  font-weight: 300;
 }
 
 li {
@@ -399,13 +399,13 @@ li {
   }
 }
 .courant__section1-article {
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   flex-wrap: nowrap;
   gap: 0px;
-  width: 100%;
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .courant__section1-article {
@@ -435,11 +435,15 @@ li {
   flex-wrap: nowrap;
   gap: 0px;
 }
-.courant__section1-article_paragraph {
-  width: 330px;
+@media screen and (min-width: 1200px) {
+  .courant__section1-article_paragraph {
+    width: 330px;
+  }
 }
-.courant__section1-article_text {
-  width: 330px;
+@media screen and (min-width: 1200px) {
+  .courant__section1-article_text {
+    width: 330px;
+  }
 }
 .courant__section1-article_text .read-more {
   display: flex;
@@ -835,6 +839,10 @@ header .nav-mobile .menu-burger {
   header .nav-desktop ul a {
     font-size: 20px;
     font-weight: normal;
+    transition: all 0.3s ease-in;
+  }
+  header .nav-desktop ul a:hover {
+    transform: translateX(-2px);
   }
 }
 body > footer {
@@ -843,19 +851,27 @@ body > footer {
   position: relative;
   margin-top: 70px;
   align-content: center;
-  justify-content: space-between;
+  justify-content: center;
   padding: 30px;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 body > footer .logo-footer {
   position: absolute;
   background-image: url("../assets/images/home/triangle-footer.svg");
   background-repeat: no-repeat;
+  transform: translateX(0%);
   background-position: center top;
   background-size: 144px 67px;
   padding: 0 50px 70px 50px;
   top: -20px;
-  width: 12%;
-  transform: translateX(50%);
+  width: 50px;
+  z-index: 1;
+}
+body > footer .footer-menu {
+  z-index: 10;
+  margin-top: 30px;
 }
 body > footer .footer-menu ul {
   width: auto;
@@ -866,7 +882,12 @@ body > footer .footer-menu ul li {
 }
 body > footer .footer-menu ul li a {
   color: white;
-  font-weight: normal;
+  font-weight: 300;
+  font-family: "Heebo", serif;
+  transition: all 0.3s linear;
+}
+body > footer .footer-menu ul li a:hover {
+  font-size: 18px;
 }
 body > footer .footer-adresse {
   width: 40%;
@@ -879,6 +900,7 @@ body > footer .footer-adresse {
     margin-top: 150px;
     justify-content: space-evenly;
     padding: 70px;
+    flex-direction: row;
   }
   body > footer .logo-footer {
     background-size: 307px 143px;
@@ -894,12 +916,6 @@ body > footer .footer-adresse {
   body > footer .footer-menu ul li {
     list-style: none;
     margin-bottom: 3px;
-  }
-  body > footer .footer-menu ul li a {
-    text-decoration: none;
-    color: white;
-    font-family: "Playfair Display", serif;
-    font-weight: normal;
   }
   body > footer .footer-adresse {
     width: 15%;

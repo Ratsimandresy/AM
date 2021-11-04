@@ -40,6 +40,10 @@ header {
         a {
           font-size: 20px;
           font-weight: normal;
+          transition: all 0.3s ease-in;
+          &:hover {
+            transform: translateX(-2px);
+          }
         }
       }
     }

@@ -56,6 +56,7 @@
       }
     }
     &-article {
+      width: 100%;
       @include flex($dir: column, $jc: center, $ai: center);
       @include laptop {
         @include flex($dir: row, $jc: space-around, $ai: center);
@@ -63,15 +64,18 @@
       @include desktop {
         @include flex($dir: row, $jc: space-around, $ai: center);
       }
-      width: 100%;
       &_ {
         @include flex($dir: column, $jc: center, $ai: center);
         &paragraph {
-          width: calc($base * 41.25);
+          @include desktop {
+            width: calc($base * 41.25);
+          }
         }
       }
       &_text {
-        width: calc($base * 41.25);
+        @include desktop {
+          width: calc($base * 41.25);
+        }
 
         .read-more {
           @include flex($dir: row, $jc: end, $ai: center);

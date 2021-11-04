@@ -19,6 +19,27 @@ p {
   line-height: 24px;
 }
 
+.section-1 {
+  margin: 80px 0;
+  display: flex;
+  justify-content: center;
+}
+.section-1 h1 {
+  font-size: 48px;
+  font-weight: normal;
+  margin: 0;
+}
+.section-1 span:first-of-type {
+  font-style: italic;
+  color: #736a63;
+  margin-left: 130px;
+  text-align: end;
+}
+.section-1 span:last-of-type {
+  color: #8b4f4f;
+  text-align: center;
+}
+
 h1,
 h2,
 h3 {
@@ -45,6 +66,40 @@ h3 {
   line-height: 48px;
 }
 
+.container a,
+#section-presentation a,
+.courant__section1-article_text a,
+.contact__info--title a {
+  padding-left: 55px;
+  position: relative;
+  transition: 0.3s linear;
+}
+.container a:hover,
+#section-presentation a:hover,
+.courant__section1-article_text a:hover,
+.contact__info--title a:hover {
+  padding-left: 20px;
+}
+.container a:hover:hover:before,
+#section-presentation a:hover:hover:before,
+.courant__section1-article_text a:hover:hover:before,
+.contact__info--title a:hover:hover:before {
+  width: 10px;
+}
+.container a::before,
+#section-presentation a::before,
+.courant__section1-article_text a::before,
+.contact__info--title a::before {
+  content: "";
+  background: url("../assets/images/home/ligne.png") center center no-repeat;
+  width: 47px;
+  height: 2px;
+  top: 10px;
+  left: 0;
+  position: absolute;
+  transition: 0.3s linear;
+}
+
 a {
   text-decoration: none;
   color: #260402;
@@ -57,8 +112,15 @@ li {
 }
 
 @media (min-width: 1000px) {
-  h1 {
-    font-size: 40px;
+  .section-1 {
+    margin: 60px 0;
+  }
+  .section-1 h1 {
+    font-size: 140px;
+    line-height: 150px;
+  }
+  .section-1 h1 span:first-of-type {
+    margin-left: 300px;
   }
 
   h2 {
@@ -67,7 +129,7 @@ li {
   }
 
   h3 {
-    font-size: 56px;
+    font-size: 40px;
     margin-bottom: 20px;
   }
 }
@@ -113,6 +175,11 @@ li {
 .contact__info--title h2 {
   width: 100%;
   text-align: left;
+}
+.contact__info--title a {
+  display: inline-block;
+  width: 100%;
+  margin-left: 56px;
 }
 .contact__info--title .read-more {
   display: flex;
@@ -303,21 +370,21 @@ li {
     position: relative;
   }
 }
-.courant__section1-title .title {
-  width: 220px;
+.courant__section1-title h1 {
+  width: 100%;
 }
 @media screen and (min-width: 468px) {
-  .courant__section1-title .title {
+  .courant__section1-title h1 {
     width: 400px;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) {
-  .courant__section1-title .title {
-    width: 520px;
+  .courant__section1-title h1 {
+    width: 100%;
   }
 }
 @media screen and (min-width: 1200px) {
-  .courant__section1-title .title {
+  .courant__section1-title h1 {
     position: absolute;
     width: 820px;
     top: -360px;
@@ -325,7 +392,7 @@ li {
   }
 }
 @media screen and (min-width: 1780px) {
-  .courant__section1-title .title {
+  .courant__section1-title h1 {
     width: 900px;
     top: -440px;
     left: -48px;
@@ -409,6 +476,11 @@ li {
   gap: 0px;
   width: min-content;
 }
+@media screen and (min-width: 1200px) {
+  .courant__section1-container2 picture {
+    margin-top: 120px;
+  }
+}
 .courant__section2 {
   width: 100%;
   margin: 80px 0;
@@ -489,7 +561,12 @@ li {
   gap: 0px;
 }
 .courant__section3 h2 {
-  margin: 40px;
+  margin-bottom: 80px;
+}
+@media screen and (min-width: 1200px) {
+  .courant__section3 h2 {
+    margin: 160px 0;
+  }
 }
 .courant__section3-art {
   width: 100%;
@@ -539,14 +616,14 @@ li {
     height: 120px;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .courant__section3-art_one .art-1 picture {
     position: absolute;
     right: 25%;
     top: 40px;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1200px) {
   .courant__section3-art_one .art-1 picture {
     position: absolute;
     right: -40px;
@@ -634,10 +711,15 @@ li {
     height: 120px;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1200px) {
+  .courant__section3-art_three .art-4 {
+    height: 100%;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .courant__section3-art_three .art-4 picture {
     position: absolute;
-    right: 80px;
+    right: 50%;
     top: 40px;
   }
 }
@@ -645,7 +727,7 @@ li {
   .courant__section3-art_three .art-4 picture {
     position: absolute;
     right: 33%;
-    top: -56px;
+    top: -320px;
   }
 }
 .courant__section3-art_three .art-5 {
@@ -658,16 +740,28 @@ li {
   flex-wrap: nowrap;
   gap: 0px;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .courant__section3-art_three .art-5 {
-    height: 280px;
+    height: 400px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .courant__section3-art_three .art-5 {
+    height: 100%;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .courant__section3-art_three .art-5 picture {
+    position: absolute;
+    right: 30%;
+    top: 240px;
   }
 }
 @media screen and (min-width: 1200px) {
   .courant__section3-art_three .art-5 picture {
     position: absolute;
-    right: 216px;
-    top: 280px;
+    right: 280px;
+    top: 120px;
   }
 }
 .courant__section3-art_three .art-6 {
@@ -680,9 +774,14 @@ li {
   flex-wrap: nowrap;
   gap: 0px;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .courant__section3-art_three .art-6 {
-    height: 120px;
+    height: 240px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .courant__section3-art_three .art-6 {
+    height: 100%;
   }
 }
 @media screen and (min-width: 768px) {
@@ -696,7 +795,7 @@ li {
   .courant__section3-art_three .art-6 picture {
     position: absolute;
     left: 42%;
-    top: -160px;
+    top: -40px;
   }
 }
 
@@ -813,10 +912,6 @@ body > footer .footer-adresse {
   justify-content: center;
 }
 
-h1 {
-  font-family: "Playfair Display", serif;
-  font-weight: 500;
-}
 h1 span {
   margin-left: 60px;
 }
@@ -824,7 +919,6 @@ h1 span {
 p {
   font-family: "Heebo", sans-serif;
   font-weight: 300;
-  margin: 0;
 }
 
 #section-presentation {
@@ -925,7 +1019,7 @@ p {
   #section-presentation {
     flex-direction: row-reverse;
     align-items: flex-start;
-    margin-top: 5%;
+    margin-top: 15%;
     margin-bottom: 15%;
   }
   #section-presentation div:nth-child(1) {
@@ -975,42 +1069,6 @@ p {
     margin-top: -20px;
   }
 
-  /* #section-organization-musee {
-      padding: 0 5%;
-      .contain-organization {
-          display: grid;
-          grid-template-columns: 1fr 1fr 1fr 1fr;
-          grid-template-rows: 1fr 1fr;
-          gap: 0px 0px;
-          grid-auto-flow: row;
-          grid-template-areas: "title-organization title-organization organization1 organization2" "organization3 organization3 organization4 organization5";
-          p {
-              margin: 0 40px;
-          }
-          h3 {
-              margin: 30px 0;
-          }
-          div:nth-child(2), div:nth-child(3), div:nth-child(4), div:nth-child(5), div:nth-child(6) {
-              text-align: center;
-              margin: 45px 0 45px 0;
-          }
-      }
-        .title-organization { grid-area: title-organization; }
-
-        .organization1 { grid-area: organization1; }
-
-        .organization2 { grid-area: organization2; }
-
-        .organization3 { 
-              width: 50%;
-              text-align: right !important;
-          grid-area: organization3; }
-
-        .organization4 { grid-area: organization4; }
-
-        .organization5 { grid-area: organization5; }
-
-  } */
   #section-organization-musee .contain-organization {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -1092,36 +1150,6 @@ p {
 }
 .container {
   margin: 20px;
-}
-.container a {
-  padding-left: 55px;
-  position: relative;
-}
-.container a::before {
-  content: "";
-  background: url("../assets/images/ligne.png") center center no-repeat;
-  width: 47px;
-  height: 2px;
-  top: 10px;
-  left: 0;
-  position: absolute;
-}
-.container .section-1 {
-  margin: 80px 0;
-}
-.container .section-1 h1 {
-  font-size: 40px;
-  font-weight: normal;
-  margin: 0;
-}
-.container .section-1 h2:first-of-type {
-  font-style: italic;
-  color: #736a63;
-  text-align: end;
-}
-.container .section-1 h2:last-of-type {
-  color: #8b4f4f;
-  text-align: center;
 }
 .container .section-2 {
   display: grid;
@@ -1249,15 +1277,6 @@ p {
     max-width: 1440px;
     margin: auto;
     padding: 0 10%;
-  }
-  .container .section-1 {
-    margin: 60px 0;
-  }
-  .container .section-1 h1,
-.container .section-1 h2,
-.container .section-1 h3 {
-    font-size: 140px;
-    line-height: 150px;
   }
   .container .section-2 {
     margin-top: 200px;

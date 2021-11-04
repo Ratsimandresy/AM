@@ -20,6 +20,11 @@
         width: 100%;
         text-align: left;
       }
+      a {
+        display: inline-block;
+        width: 100%;
+        margin-left: calc($base * 7);
+      }
 
       .read-more {
         @include flex($dir: row, $jc: end, $ai: center);

@@ -34,13 +34,13 @@
         height: calc($base * 19);
         position: relative;
       }
-      .title {
-        width: 220px;
+      h1 {
+        width: 100%;
         @include mobile {
           width: 400px;
         }
         @include laptop {
-          width: 520px;
+          width: 100%;
         }
         @include desktop {
           position: absolute;
@@ -92,6 +92,11 @@
     &-container2 {
       @include flex($dir: row, $jc: center, $ai: center);
       width: min-content;
+      picture {
+        @include desktop {
+          margin-top: calc($base * 15);
+        }
+      }
     }
   }
 
@@ -149,7 +154,10 @@
     @include flex($dir: column, $jc: center, $ai: center);
 
     h2 {
-      margin: calc($base * 5);
+      margin-bottom: calc($base * 10);
+      @include desktop {
+        margin: calc($base * 20) 0;
+      }
     }
 
     &-art {
@@ -172,12 +180,12 @@
           width: 100%;
           @include flex($dir: row, $jc: center, $ai: center);
           picture {
-            @include tablet {
+            @include laptop {
               position: absolute;
               right: 25%;
               top: calc($base * 5);
             }
-            @include tablet {
+            @include desktop {
               position: absolute;
               right: calc($base * -5);
               top: calc($base * -5);
@@ -223,46 +231,61 @@
           width: 30%;
         }
         .art-4 {
+          position: relative;
+          width: 100%;
           @include tablet {
             height: calc($base * 15);
           }
-          position: relative;
-          width: 100%;
+          @include desktop {
+            height: 100%;
+          }
+
           @include flex($dir: row, $jc: center, $ai: center);
           picture {
-            @include tablet {
+            @include laptop {
               position: absolute;
-              right: calc($base * 10);
+              right: 50%;
               top: calc($base * 5);
             }
             @include desktop {
               position: absolute;
               right: 33%;
-              top: calc($base * -7);
+              top: calc($base * -40);
             }
           }
         }
         .art-5 {
           position: relative;
-          @include tablet {
-            height: calc($base * 35);
-          }
           width: 100%;
+          @include laptop {
+            height: calc($base * 50);
+          }
+          @include desktop {
+            height: 100%;
+          }
           @include flex($dir: row, $jc: center, $ai: center);
           picture {
+            @include laptop {
+              position: absolute;
+              right: 30%;
+              top: calc($base * 30);
+            }
             @include desktop {
               position: absolute;
-              right: calc($base * 27);
-              top: calc($base * 35);
+              right: calc($base * 35);
+              top: calc($base * 15);
             }
           }
         }
         .art-6 {
           position: relative;
-          @include tablet {
-            height: calc($base * 15);
-          }
           width: 100%;
+          @include laptop {
+            height: calc($base * 30);
+          }
+          @include desktop {
+            height: 100%;
+          }
           @include flex($dir: row, $jc: center, $ai: center);
           picture {
             @include tablet {
@@ -273,7 +296,7 @@
             @include desktop {
               position: absolute;
               left: 42%;
-              top: calc($base * -20);
+              top: calc($base * -5);
             }
           }
         }

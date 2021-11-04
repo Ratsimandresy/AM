@@ -15,6 +15,30 @@ p {
   line-height: 24px;
 }
 
+.section-1 {
+  margin: 80px 0;
+  display: flex;
+  justify-content: center;
+
+  h1 {
+    font-size: 48px;
+    font-weight: normal;
+    margin: 0;
+  }
+
+  span:first-of-type {
+    font-style: italic;
+    color: $color-darkGrey;
+    margin-left: 130px;
+    text-align: end;
+  }
+
+  span:last-of-type {
+    color: $color-brand;
+    text-align: center;
+  }
+}
+
 h1,
 h2,
 h3 {
@@ -41,6 +65,33 @@ h3 {
   line-height: 48px;
 }
 
+.container,
+#section-presentation,
+.courant__section1-article_text,
+.contact__info--title {
+  a {
+    padding-left: 55px;
+    position: relative;
+    transition: 0.3s linear;
+    &:hover {
+      padding-left: 20px;
+      &:hover:before {
+        width: 10px;
+      }
+    }
+  }
+  a::before {
+    content: "";
+    background: url("../assets/images/home/ligne.png") center center no-repeat;
+    width: 47px;
+    height: 2px;
+    top: 10px;
+    left: 0;
+    position: absolute;
+    transition: 0.3s linear;
+  }
+}
+
 a {
   text-decoration: none;
   color: $color-black;
@@ -53,8 +104,16 @@ li {
 }
 
 @media (min-width: 1000px) {
-  h1 {
-    font-size: 40px;
+  .section-1 {
+    margin: 60px 0;
+
+    h1 {
+      font-size: 140px;
+      line-height: 150px;
+      span:first-of-type {
+        margin-left: 300px;
+      }
+    }
   }
 
   h2 {
@@ -63,7 +122,7 @@ li {
   }
 
   h3 {
-    font-size: 56px;
+    font-size: 40px;
     margin-bottom: 20px;
   }
 }
